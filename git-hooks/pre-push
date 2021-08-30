@@ -1,0 +1,36 @@
+#!/bin/bash
+export LANG=C.UTF-8
+
+RED='\033[0;31m'
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo ""
+echo -e "${YELLOW}Running Unit Tests${NC}"
+dotnet test ./tests/UnitTests/ -v q
+
+rc=$?
+if [[ $rc != 0 ]] ; then
+    echo -e "${RED}Unit tests failed, please fix and push again${NC}"
+    echo ""
+    exit $rc
+fi
+
+echo -e "${GREEN}Unit Tests passed!${NC}"
+    
+echo ""
+echo -e "${YELLOW}Running Integration Tests${NC}"
+dotnet test ./test/IntegrationTests/ -v q
+
+rc=$?
+if [[ $rc != 0 ]] ; then
+    echo -e "${RED}Integration tests failed, please fix and push again${NC}"
+    echo ""
+    exit $rc
+fi
+
+echo -e "${GREEN}Integration Tests passed!${NC}"
+
+echo -e "${GREEN}Pre push check passed!${NC}"
+echo ""
