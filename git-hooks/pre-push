@@ -19,9 +19,9 @@ fi
 
 echo -e "${GREEN}Unit Tests passed!${NC}"
     
-echo ""
-echo -e "${YELLOW}Running Integration Tests${NC}"
-dotnet test ./test/IntegrationTests/ -v q
+# echo ""
+# echo -e "${YELLOW}Running Integration Tests${NC}"
+# dotnet test ./tests/IntegrationTests/ -v q
 
 rc=$?
 if [[ $rc != 0 ]] ; then
