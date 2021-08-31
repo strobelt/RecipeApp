@@ -7,10 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoBogus.FakeItEasy" Version="2.13.1" />
+    <PackageReference Include="Bogus" Version="33.1.1" />
+    <PackageReference Include="FakeItEasy" Version="7.1.0" />
+    <PackageReference Include="FluentAssertions" Version="6.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
     <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\api\RecipeApi.csproj" />
   </ItemGroup>
 
 </Project>
