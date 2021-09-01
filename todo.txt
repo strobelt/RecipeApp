@@ -1,0 +1,3 @@
+Configure a build system
+Add docker run to it with commamnd
+ sudo docker run -e "ACCEPT_EULA=y" -e "SA_PASSWORD=R3c1p3@pp" -p 1433:1433 --name recipe-db -h recipe-db -d mcr.microsoft.com/mssql/server:2019-latest

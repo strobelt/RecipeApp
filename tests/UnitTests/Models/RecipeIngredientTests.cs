@@ -4,12 +4,12 @@ using RecipeApi.Models;
 
 namespace UnitTests.Models
 {
-    public class IngredientTests
+    public class RecipeIngredientTests
     {
         [Test]
         public void ShouldCreate()
         {
-            var ingredient = new Ingredient();
+            var ingredient = new RecipeIngredient();
             ingredient.Should().NotBeNull();
         }
     }
