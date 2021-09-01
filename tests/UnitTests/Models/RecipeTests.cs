@@ -2,17 +2,41 @@ using Bogus;
 using FluentAssertions;
 using NUnit.Framework;
 using RecipeApi.Models;
+using UnitTests.Builders;
 
 namespace UnitTests.Models
 {
     public class RecipeTests
     {
-        [Test]
-        public void ShouldCreateWithTitle()
+        private string expectedTitle;
+        private Recipe recipe;
+
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
         {
-            var expectedTitle = new Faker().Lorem.Sentence(2);
-            var recipe = new Recipe(expectedTitle);
-            recipe.Should().NotBeNull();
+            expectedTitle = new Faker().Lorem.Sentence(2);
+            recipe = new Recipe(expectedTitle);
+        }
+
+        [Test]
+        public void ShouldCreateWithTitle() => recipe.Should().NotBeNull();
+
+        [Test]
+        public void ShouldAddAnIngredient()
+        {
+            var expectedIngredient = new IngredientBuilder().Generate();
+            recipe.AddIngredient(expectedIngredient);
+
+            recipe.Ingredients.Should().Contain(expectedIngredient);
+        }
+
+        [Test]
+        public void ShouldAddAnStep()
+        {
+            var expectedStep = new StepBuilder().Generate();
+            recipe.AddStep(expectedStep);
+
+            recipe.Steps.Should().Contain(expectedStep);
         }
     }
 }
