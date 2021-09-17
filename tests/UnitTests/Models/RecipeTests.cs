@@ -1,7 +1,7 @@
 using Bogus;
 using FluentAssertions;
 using NUnit.Framework;
-using RecipeApi.Models;
+using RecipeModels;
 using UnitTests.Builders;
 
 namespace UnitTests.Models

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using RecipeApi.Models;
+using RecipeModels;
 using System.Collections.Generic;
 
 namespace RecipeApi.Controllers

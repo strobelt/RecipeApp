@@ -1,5 +1,5 @@
 using AutoBogus;
-using RecipeApi.Models;
+using RecipeModels;
 
 namespace UnitTests.Builders
 {

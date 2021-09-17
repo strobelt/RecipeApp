@@ -23,7 +23,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{E88D56
 		docker\CreateRecipeDb.sql = docker\CreateRecipeDb.sql
 		docker\db.Dockerfile = docker\db.Dockerfile
 		docker\docker-compose.yml = docker\docker-compose.yml
+		docker\migrations.Dockerfile = docker\migrations.Dockerfile
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeDatabase", "src\database\RecipeDatabase.csproj", "{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeModels", "src\models\RecipeModels.csproj", "{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +64,30 @@ Global
 		{44403E35-D3FB-4406-B9E5-ED2DE5D7F707}.Release|x64.Build.0 = Release|Any CPU
 		{44403E35-D3FB-4406-B9E5-ED2DE5D7F707}.Release|x86.ActiveCfg = Release|Any CPU
 		{44403E35-D3FB-4406-B9E5-ED2DE5D7F707}.Release|x86.Build.0 = Release|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Debug|x64.Build.0 = Debug|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Release|x64.ActiveCfg = Release|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Release|x64.Build.0 = Release|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A}.Release|x86.Build.0 = Release|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Debug|x64.Build.0 = Debug|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Debug|x86.Build.0 = Debug|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Release|x64.ActiveCfg = Release|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Release|x64.Build.0 = Release|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Release|x86.ActiveCfg = Release|Any CPU
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +96,8 @@ Global
 		{2E46E7B0-F0E7-4BF8-B378-914501C89675} = {9A0FD916-EC02-41D9-8218-72905AE18673}
 		{44403E35-D3FB-4406-B9E5-ED2DE5D7F707} = {266B4BC1-430C-4409-BC3C-7D9BE9E06042}
 		{E88D56B2-0DC1-4546-9680-67E0086EBEEB} = {793FEC23-8AB4-4329-A2C4-3B41F51292C2}
+		{0B8EC9E9-310B-4EF8-A6A7-ACA64B1F248A} = {9A0FD916-EC02-41D9-8218-72905AE18673}
+		{6043A5D0-7D73-4A6B-8C78-950D5E6A63AD} = {9A0FD916-EC02-41D9-8218-72905AE18673}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B7E25F0-ADB9-40E8-8D2B-8A7F07DED8F9}

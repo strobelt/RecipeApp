@@ -1,6 +1,6 @@
 using FluentAssertions;
 using NUnit.Framework;
-using RecipeApi.Models;
+using RecipeModels;
 
 namespace UnitTests.Models
 {

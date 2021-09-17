@@ -1,8 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using RecipeApi.Models;
+using RecipeModels;
 
-namespace RecipeApi
+namespace RecipeDatabase
 {
     public class RecipeContext : DbContext
     {
@@ -27,13 +26,5 @@ namespace RecipeApi
             modelBuilder.Entity<Step>()
                 .HasKey(s => s.Id);
         }
-    }
-
-    public static class RecipeContextServiceCollectionExtensions
-    {
-        public static void AddRecipeDbContext(this IServiceCollection serviceCollection,
-                string connectionString)
-            => serviceCollection.AddDbContext<RecipeContext>(
-                options => options.UseSqlServer(connectionString));
     }
 }

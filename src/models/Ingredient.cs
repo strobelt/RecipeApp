@@ -1,4 +1,4 @@
-namespace RecipeApi.Models
+namespace RecipeModels
 {
     public class Ingredient
     {

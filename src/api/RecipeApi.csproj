@@ -19,6 +19,11 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\database\RecipeDatabase.csproj" />
+    <ProjectReference Include="..\models\RecipeModels.csproj" />
+  </ItemGroup>
+
   <Target Name="MyPreCompileTarget" BeforeTargets="Build">
     <Exec Command="git config core.hooksPath git-hooks" />
   </Target>
