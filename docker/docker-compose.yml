@@ -1,0 +1,7 @@
+services:
+  db:
+    build:
+        context: .
+        dockerfile: db.Dockerfile
+    ports:
+      - "1433:1433"
