@@ -4,9 +4,17 @@ services:
       context: .
       dockerfile: db.Dockerfile
     ports:
-      - "1433:1433"
+      - '1433:1433'
+    container_name: 'recipe-db'
+    image: recipe-db
 
-  app:
+  migrations:
     build:
-      context: .
-      dockerfile: app.Dockerfile
+      context: ../
+      dockerfile: docker/migrations.Dockerfile
+    depends_on:
+      - db
+    container_name: 'recipe-migrations'
+    image: recipe-migrations
+    environment:
+       - ConnectionStrings__RecipeDb=Server=db,1433;Initial Catalog=RecipeDb;Persist Security Info=False;User ID=recipedb;Password=R3c1p3@pp;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;
